@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<p>hello</p>
+    <form action="/upload_file" id="upload_file" method="post"> {% csrf_token %}
+{#        <input type="file" id="file" name="file">#}
+        {{ form_upload }}
+        <button id="button_for_upload_file" type="submit">Отправить</button>
+    </form>
+{#    <button class="download_button" id="download"></button>#}
+    <div class="for_download"></div>
+{% endblock %}
